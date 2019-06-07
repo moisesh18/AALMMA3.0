@@ -10,5 +10,4 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-    Voyager::routes();
+Voyager::routes();

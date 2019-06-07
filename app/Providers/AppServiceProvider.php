@@ -1,7 +1,11 @@
 <?php
 
 namespace App\Providers;
-
+use TCG\Voyager\Facades\Voyager;
+use App\FormFields\Family;
+use App\FormFields\Conditional;
+use App\FormFields\Escala;
+use App\FormFields\JSON;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +17,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        Voyager::addFormField(Family::class);
+        Voyager::addFormField(Conditional::class);
+        Voyager::addFormField(Escala::class);
+        Voyager::addFormField(JSON::class);
     }
 
     /**
