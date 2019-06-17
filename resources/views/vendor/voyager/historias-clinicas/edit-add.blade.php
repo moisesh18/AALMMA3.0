@@ -52,18 +52,16 @@
                                 @if ($edit)
                                     <input type="hidden" name="{{$dataType->slug}}[id]" value={{$dataTypeContent->id}}>
                                 @endif
-                                <div class="panel-body">
+                                <div class="panel-body row row-flex">
                                     <div class="form-group  col-md-12 ">
                                         <h6 class="text-uppercase">
                                             {{ $dataType->display_name_plural }}
                                         </h6>
                                     </div>
-                                    <!-- Adding / Editing -->
                                     @php
                                         $dataTypeRows = $dataType->{($edit ? 'editRows' : 'addRows' )};
                                     @endphp
                                     @foreach($dataTypeRows as $row)
-                                        <!-- GET THE DISPLAY OPTIONS -->
                                         @php
                                             $display_options = $row->details->display ?? NULL;
                                             if ($dataTypeContent->{$row->field.'_'.($edit ? 'edit' : 'add')}) {
@@ -80,6 +78,14 @@
                                             @include('voyager::multilingual.input-hidden-bread-edit-add')
                                             @if (isset($row->details->view))
                                                 @include($row->details->view, ['row' => $row, 'dataTypes' => $dataType, 'dataTypeContent' => $dataTypeContent, 'content' => $dataTypeContent->{$row->field}, 'action' => ($edit ? 'edit' : 'add')])
+                                            @elseif (isset($defaultSlug) && $dataType->slug == $defaultSlug)
+                                                @if ($row->type == 'select_dropdown')
+                                                    <p><?php echo $row->details->options->{$dataTypeContent->{$row->field}};?></p>
+                                                @elseif($row->type == 'relationship')
+                                                    @include('voyager::formfields.relationship', ['view' => 'read', 'options' => $row->details])
+                                                @else
+                                                    <p>{{ $dataTypeContent->{$row->field} }}</p>
+                                                @endif
                                             @elseif ($row->type == 'relationship')
                                                 @include('voyager::formfields.relationship_hc', ['options' => $row->details])
                                             @else
@@ -172,8 +178,14 @@
 
         $('document').ready(function () {
             $('.toggleswitch').bootstrapToggle();
-            $('.toggle').click(function(){
-                $(this).next().toggleClass("hidden");
+            $('.custom-form-conditional .toggle:not(.off)').each(function () {
+                $(this).parent().children('.conditional').toggleClass('hidden');
+            });
+            $('.custom-form-conditional .toggle').each(function(){
+                $(this).on("click", function(){
+                    $(this).parent().children('.conditional').toggleClass('hidden');
+                    $(this).parent().find('.form-control').val('');
+                });
             });
 
             //Init datepicker for date fields if data-datepicker attribute defined

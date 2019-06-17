@@ -2,19 +2,14 @@
     border: none;
 }
 
-.custom-form-conditional {
-    display: inline-block;
-    margin: 0;
-}
-
-.custom-form-conditional input {
-    max-height: 30px;
-}
-
 .border {
     border: 2px solid #dee2e6;
     margin: 0 15px;
     padding: 15px 0;
+}
+
+.custom-form-conditional .form-control{
+    margin:1em 0;
 }
 
 .input-group-text {
@@ -80,4 +75,12 @@
 .mb-3,
 .my-3 {
     margin-bottom: 1rem !important;
+}
+
+.t {
+    white-space: nowrap !important;
+}
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
 }

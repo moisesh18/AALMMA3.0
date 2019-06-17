@@ -9,6 +9,7 @@ class hcTables
             , 'nucleos'
             , 'pacientes'
             , 'hca_ev_tutores'
+            , 'hcp_evaluaciones_iniciales'
             , 'hc_evaluaciones_iniciales'
             , 'hcg_ev_psicologicas_evaluaciones'
 
@@ -44,7 +45,7 @@ class hcTables
             , 'hcg_hca_exploraciones_fisicas'
             , 'hcp_exploraciones_fisicas'
             , 'hc_habitus_exteriors'
-            , 'hcp_hca_estado_nutricional'
+            , 'hcp_hca_estado_nutricionals'
             , 'hc_pronosticos'
         );
 }

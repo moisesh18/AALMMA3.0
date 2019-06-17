@@ -99,7 +99,7 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
             //$this->authorize('edit', $dataTypeContent[$currentDataType->slug]);
         }
         $view = 'voyager::bread.edit-add';
-        if (view()->exists("voyager::$this->defaultSlug.read")) {
+        if (view()->exists("voyager::$this->defaultSlug.{$dataTypeContent[$this->defaultModelName]->tipo}")) {
             $view = "voyager::$this->defaultSlug.{$dataTypeContent[$this->defaultModelName]->tipo}";
         }
 
@@ -144,7 +144,7 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
             $view = "voyager::{$this->defaultSlug}.edit-add";
         }
 
-        return Voyager::view($view, array('dataTypes' => $allDataTypes, 'dataTypeContents' => $dataTypeContent));
+        return Voyager::view($view, array('dataTypes' => $allDataTypes, 'dataTypeContents' => $dataTypeContent, 'defaultSlug'=> $this->defaultSlug));
     }
 
     // POST BR(E)AD
@@ -153,6 +153,9 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
         $dataTypeContent = array($this->defaultModel->findOrFail($id));
         $allDataTypes = $this->HCDataTypes($dataTypeContent[0]->tipo,1);
         foreach($allDataTypes as $dataType){
+            if($dataType->name == $this->defaultModelName){
+                continue;
+            }
             $newRequest = $request->duplicate();
             try {
                 $newRequest->request->replace($newRequest->input($dataType->slug));
@@ -177,6 +180,9 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
             foreach($dataType->editRows as $row){
                 if(in_array($row->type, array('Familia', 'Escala', 'JSON'))){
                    $row->type = 'select_multiple';
+                }
+                else if(in_array($row->type, array('Conditional'))){
+                   $row->type = 'text';
                 }
             }
 
@@ -216,13 +222,13 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
                             ->where('slug', '=', "{$this->defaultSlug}")
                             ->Orwhere('slug', 'like', "hc-%")
                             ->OrWhere('slug', 'like', "%{$str}-%")
-                            ->orderBy('id', 'asc')
+                            ->orderBy('created_at', 'asc')
                             ->get();
         }else if ($default==2){
             return Voyager::model('DataType')
                             ->where('slug', 'like', "hc-%")
                             ->orWhere('slug', 'like', "%{$str}-%")
-                            ->orderBy('id', 'asc')
+                            ->orderBy('created_at', 'asc')
                             ->get();
 
         }else if ($default==3){
@@ -232,7 +238,7 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
                             ->Orwhere('name', '=', "pacientes")
                             ->Orwhere('slug', 'like', "hc-%")
                             ->OrWhere('slug', 'like', "%{$str}-%")
-                            ->orderBy('id', 'asc')
+                            ->orderBy('created_at', 'asc')
                             ->get();
 
         }
