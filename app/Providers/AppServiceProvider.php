@@ -6,7 +6,6 @@ use App\FormFields\Family;
 use App\FormFields\Conditional;
 use App\FormFields\Escala;
 use App\FormFields\JSON;
-//use App\Http\Controllers\DataType;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
         Voyager::addFormField(Conditional::class);
         Voyager::addFormField(Escala::class);
         Voyager::addFormField(JSON::class);
-        Voyager::useModel('DataType', \App\Http\Controllers\DataType::class);
+        Voyager::useModel('DataType', \App\DataType::class);
     }
 
     /**

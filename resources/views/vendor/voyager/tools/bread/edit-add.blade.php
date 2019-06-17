@@ -263,7 +263,7 @@
                                             name="hc_order"
                                             type="number"
                                             placeholder="Orden"
-                                            value="{{ $dataType->hc_order ?? 0 }}"
+                                            value="{{ $dataType->hc_order}}"
                                             >
                                     </div>
                                 @endif

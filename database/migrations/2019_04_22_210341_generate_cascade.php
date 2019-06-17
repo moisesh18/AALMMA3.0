@@ -29,6 +29,7 @@ class GenerateCascade extends Migration
      */
     public function up()
     {
+        $index=1; //its for datatype order, needs to start on 1
         foreach($this->allTables as $hcTable){
             $this->itsNecesaryIdontKnowWhy = $hcTable;
 
@@ -65,8 +66,9 @@ class GenerateCascade extends Migration
                 'controller'            => '',
                 'generate_permissions'  => 1,
                 'description'           => '',
+                'details'               => '{"hc_order":'+$index+'}'
             ])->save();
-
+            $index++;
 
             Permission::generateFor($this->itsNecesaryIdontKnowWhy);
 

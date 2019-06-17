@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App;
 
 class DataType extends \TCG\Voyager\Models\DataType
 {
@@ -27,7 +27,7 @@ class DataType extends \TCG\Voyager\Models\DataType
 
     public function getHcOrderAttribute()
     {
-        return $this->details->hc_order ?? null;
+        return $this->details->hc_order ?? 0;
     }
 
     public function setHcOrderAttribute($value)
