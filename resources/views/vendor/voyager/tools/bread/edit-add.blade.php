@@ -256,12 +256,14 @@
                                               placeholder="{{ __('voyager::bread.description') }}"
                                         >{{ $dataType->description ?? '' }}</textarea>
                                 </div>
-                                @if (preg_match('/hc\w+_/', $dataType->name))
+
+                                @if (isset($dataType) && preg_match('/hc(\w+)?_/', $dataType->name))
                                     <div class="col-md-3 form-group">
                                         <label for="HC_order">Orden en HC</label>
                                         <input class="form-control"
                                             name="hc_order"
                                             type="number"
+                                            step=".01"
                                             placeholder="Orden"
                                             value="{{ $dataType->hc_order}}"
                                             >

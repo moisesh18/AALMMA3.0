@@ -8,6 +8,7 @@ class hcTables
             'historias_clinicas'
             , 'nucleos'
             , 'pacientes'
+            , 'nota_de_evolucions'
             , 'hca_ev_tutores'
             , 'hcp_evaluaciones_iniciales'
             , 'hc_evaluaciones_iniciales'
@@ -42,7 +43,7 @@ class hcTables
             //GENERALES
             , 'hc_motivo_padecimientos'
             , 'hc_interrogatorio_por_sistemas'
-            , 'hcg_hca_exploraciones_fisicas'
+            , 'hc_exploraciones_fisicas'
             , 'hcp_exploraciones_fisicas'
             , 'hc_habitus_exteriors'
             , 'hcp_hca_estado_nutricionals'

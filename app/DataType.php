@@ -32,6 +32,6 @@ class DataType extends \TCG\Voyager\Models\DataType
 
     public function setHcOrderAttribute($value)
     {
-        $this->attributes['details'] = collect($this->details)->merge(['hc_order' => intval($value)]);
+        $this->attributes['details'] = collect($this->details)->merge(['hc_order' => doubleval($value)]);
     }
 }

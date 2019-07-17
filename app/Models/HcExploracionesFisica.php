@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class HcgHcaExploracionesFisica extends Model
+class HcExploracionesFisica extends Model
 {
     //
 }

@@ -11,3 +11,4 @@
 |
 */
 Voyager::routes();
+Route::get('hc_order', ['uses' => 'VoyagerCustom@Order', 'as' => 'historias_clinicas.order']);

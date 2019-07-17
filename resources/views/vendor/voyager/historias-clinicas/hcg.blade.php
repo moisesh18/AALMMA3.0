@@ -761,34 +761,34 @@
                 <div class="t m0 x6 h9 ya ff1 fs3 fc0 sc0 ls0 ws0">VII.EXPLORACIÓN FÍSICA</div>
             </div>
             <div class="c xb y41 w9 h5">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">GLICEMIA CAPILAR: {{$d['hcg_hca_exploraciones_fisicas']->glucemia_capilar}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">GLICEMIA CAPILAR: {{$d['hc_exploraciones_fisicas']->glucemia_capilar}}</div>
             </div>
             <div class="c x1 y42 w8 h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">PESO: {{$d['hcg_hca_exploraciones_fisicas']->peso}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">PESO: {{$d['hc_exploraciones_fisicas']->peso}}</div>
             </div>
             <div class="c xd y42 w11 h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TALLA: {{$d['hcg_hca_exploraciones_fisicas']->talla}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TALLA: {{$d['hc_exploraciones_fisicas']->talla}}</div>
             </div>
             <div class="c x4 y42 w11 h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">IMC: {{$d['hcg_hca_exploraciones_fisicas']->imc}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">IMC: {{$d['hc_exploraciones_fisicas']->imc}}</div>
             </div>
             <div class="c xc y42 wa h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">CC: {{$d['hcg_hca_exploraciones_fisicas']->cc}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">CC: {{$d['hc_exploraciones_fisicas']->cc}}</div>
             </div>
             <div class="c x8 y42 w6 h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TA: {{$d['hcg_hca_exploraciones_fisicas']->ta}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TA: {{$d['hc_exploraciones_fisicas']->ta}}</div>
             </div>
             <div class="c x9 y42 w7 h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">FC: {{$d['hcg_hca_exploraciones_fisicas']->fc}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">FC: {{$d['hc_exploraciones_fisicas']->fc}}</div>
             </div>
             <div class="c xa y42 w8 h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">FR: {{$d['hcg_hca_exploraciones_fisicas']->fr}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">FR: {{$d['hc_exploraciones_fisicas']->fr}}</div>
             </div>
             <div class="c xb y42 wf h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TEMP: {{$d['hcg_hca_exploraciones_fisicas']->temperatura}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TEMP: {{$d['hc_exploraciones_fisicas']->temperatura}}</div>
             </div>
             <div class="c xe y42 w11 h2">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">PULSO: {{$d['hcg_hca_exploraciones_fisicas']->pulso}}</div>
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">PULSO: {{$d['hc_exploraciones_fisicas']->pulso}}</div>
             </div>
             <div class="c x1 y43 w4 h14">
                 <div class="t m0 x6 h6 y6 ff1 fs1 fc0 sc0 ls0 ws0">HABITUS EXTERIOR</div>
@@ -994,8 +994,8 @@
     <script>
         $( document ).ready(function() {
             fitty('.fitty',{
-            minSize: 32,
-            maxSize: 300
+            minSize: 30,
+            maxSize: 40
             });
         });
     </script>

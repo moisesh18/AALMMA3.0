@@ -138,6 +138,7 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
             // Check permission
             $this->authorize('edit', $dataTypeContent);
         }
+
         $view = 'voyager::bread.edit-add';
 
         if (view()->exists("voyager::{$this->defaultSlug}.edit-add")) {
@@ -152,7 +153,10 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
     {
         $dataTypeContent = array($this->defaultModel->findOrFail($id));
         $allDataTypes = $this->HCDataTypes($dataTypeContent[0]->tipo,1);
+        $i = 0;
         foreach($allDataTypes as $dataType){
+            echo $i;
+            echo $dataType->slug;
             if($dataType->name == $this->defaultModelName){
                 continue;
             }
@@ -185,11 +189,11 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
                    $row->type = 'text';
                 }
             }
-
             // Validate fields with ajax
             $val = $this->validateBread($newRequest->all(), $dataType->editRows, $dataType->name, $id)->validate();
-            $this->insertUpdateData($newRequest, $dataType->slug, $dataType->editRows, $data);
 
+            $this->insertUpdateData($newRequest, $dataType->slug, $dataType->editRows, $data);
+            $i++;
             event(new BreadDataUpdated($dataType, $data));
         }
 
@@ -218,29 +222,39 @@ class HistoriasClinicasController extends \TCG\Voyager\Http\Controllers\VoyagerB
 
     public function HCDataTypes($str, $default){
         if($default==1){
-            return Voyager::model('DataType')
+            $data_types = Voyager::model('DataType')
                             ->where('slug', '=', "{$this->defaultSlug}")
-                            ->Orwhere('slug', 'like', "hc-%")
+                            //->Orwhere('slug', 'like', "hc-%")
                             ->OrWhere('slug', 'like', "%{$str}-%")
-                            ->orderBy('created_at', 'asc')
-                            ->get();
+                            ->orderByRaw("CAST(JSON_EXTRACT(details, '$.hc_order') AS DECIMAL(6,4))");
         }else if ($default==2){
-            return Voyager::model('DataType')
-                            ->where('slug', 'like', "hc-%")
+            $data_types = Voyager::model('DataType')
+                            //->where('slug', 'like', "hc-%")
                             ->orWhere('slug', 'like', "%{$str}-%")
-                            ->orderBy('created_at', 'asc')
-                            ->get();
-
+                            ->orderByRaw("CAST(JSON_EXTRACT(details, '$.hc_order') AS DECIMAL(6,4))");
         }else if ($default==3){
-            return Voyager::model('DataType')
+            $data_types = Voyager::model('DataType')
                             ->where('slug', '=', "{$this->defaultSlug}")
                             ->Orwhere('name', '=', "nucleos")
                             ->Orwhere('name', '=', "pacientes")
-                            ->Orwhere('slug', 'like', "hc-%")
+                            //->Orwhere('slug', 'like', "hc-%")
                             ->OrWhere('slug', 'like', "%{$str}-%")
-                            ->orderBy('created_at', 'asc')
-                            ->get();
-
+                            ->orderByRaw("CAST(JSON_EXTRACT(details, '$.hc_order') AS DECIMAL(6,4))");
         }
+
+        //Las notas de evolución no necesitan EVALUACIONES INICIALES, INTERROGATORIO POR SISTEMAS
+        if($str == 'notas'){
+            $data_types->OrWhere(function($query){
+                $query->Where('slug', 'LIKE', "hc-%")
+                      ->Where(function($query){
+                          $query->Where('slug', 'NOT LIKE', "%iniciales%");
+                          $query->Where('slug', 'NOT LIKE', "%interrogatorio%");
+                      });
+            });
+        }else{
+            $data_types->orWhere('slug', 'like', "hc-%");
+        }
+
+        return $data_types->get();
     }
 }
