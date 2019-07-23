@@ -434,20 +434,20 @@
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">DIABETES:</div>
             </div>
             <div class="c xd y28 w11 h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->diabetes}}</div>
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->diabetes)}}</div>
             </div>
             <div class="c x4 y28 w11 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">HIPERTENSIÓN:</div>
             </div>
             <div class="c xc y28 wa h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->hipertension}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->hipertension)}}
                 </div>
             </div>
             <div class="c x8 y28 w6 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">DISLIPIDEMIAS:</div>
             </div>
             <div class="c x9 y28 we h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->dislipidemias}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->dislipidemias)}}
                 </div>
             </div>
             <div class="c xb y28 w9 h2">
@@ -470,62 +470,62 @@
             </div>
             <div class="c x9 y29 we hf">
                 <div class="t m0 x7 hb y2a ff3 fs5 fc0 sc0 ls0 ws0">
-                    {{$d['hca_hcg_an_personales_pats']->cirugias}}
+                    {{IfValue($d['hca_hcg_an_personales_pats']->cirugias)}}
                 </div>
             </div>
             <div class="c xb y29 wf hf w110">
                 <div class="t m0 x6 hb y2a ff3 fs5 fc0 sc0 ls0 ws0">TABACO:
-                    {{$d['hca_hcg_an_personales_pats']->tabaco}}</div>
+                    {{IfValue($d['hca_hcg_an_personales_pats']->tabaco)}}</div>
             </div>
             <div class="c x1 y2b w8 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">NEFROPATÍAS:</div>
             </div>
             <div class="c xd y2b w11 h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->nefropatias}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->nefropatias)}}
                 </div>
             </div>
             <div class="c x4 y2b w11 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">CARDIOPATÍAS:</div>
             </div>
             <div class="c xc y2b wa h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->cardiopatias}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->cardiopatias)}}
                 </div>
             </div>
             <div class="c x8 y2b w6 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">NEUMOPATÍAS:</div>
             </div>
             <div class="c x9 y2b we h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->neumopatias}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->neumopatias)}}
                 </div>
             </div>
             <div class="c xb y2b wf h2 w110">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">ALCOHOL:
-                    {{$d['hca_hcg_an_personales_pats']->alcohol}}</div>
+                    {{IfValue($d['hca_hcg_an_personales_pats']->alcohol)}}</div>
             </div>
             <div class="c x1 y2c w8 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">PSIQUIÁTRICOS:</div>
             </div>
             <div class="c xd y2c w11 h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->psiquiatricos}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->psiquiatricos)}}
                 </div>
             </div>
             <div class="c x4 y2c w11 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">CONVULSIONES:</div>
             </div>
             <div class="c xc y2c wa h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->convulsiones}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->convulsiones)}}
                 </div>
             </div>
             <div class="c x8 y2c w6 h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">ONCOLÓGICOS:</div>
             </div>
             <div class="c x9 y2c we h2">
-                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->oncologicos}}
+                <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">{{IfValue($d['hca_hcg_an_personales_pats']->oncologicos)}}
                 </div>
             </div>
             <div class="c xb y2c wf h2">
                 <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">DROGAS:
-                    {{$d['hca_hcg_an_personales_pats']->drogas}}</div>
+                    {{IfValue($d['hca_hcg_an_personales_pats']->drogas)}}</div>
             </div>
             <div class="c x1 y2d w11 h3 w110">
                 <div class="t m0 x7 hb y10 ff3 fs5 fc0 sc0 ls0 ws0 f-small">ENFERMEDADES INFECTO-CONTAGIOSAS:</div>
@@ -665,7 +665,7 @@
                 <div class="t m0 x6 h9 ya ff1 fs3 fc0 sc0 ls0 ws0">V. PADECIMIENTO ACTUAL</div>
             </div>
             <div class="c x1 y39 w2 h13 ">
-                <div class="t m0 x6 h8 y3a ff3 fs2 fc0 sc0 ls0 ws0 fittys">
+                <div class="t m0 x6 h8 y3a ff3 fs2 fc0 sc0 ls0 ws0 fitty">
                     {{$d['hc_motivo_padecimientos']->padecimiento_actual}}
                 </div>
             </div>
@@ -848,7 +848,7 @@
                 <div class="t m0 x6 hb y10 ff1 fs5 fc0 sc0 ls0 ws0">CABEZA</div>
             </div>
             <div class="c xd y46 w16 h15">
-                <div class="t m0 x6 h8 y47 ff3 fs2 fc0 sc0 ls0 ws0 fityy">
+                <div class="t m0 x6 h8 y47 ff3 fs2 fc0 sc0 ls0 ws0 fitty">
                     {{$d['hc_habitus_exteriors']->cabeza}}
                 </div>
             </div>

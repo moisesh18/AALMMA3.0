@@ -517,7 +517,7 @@
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">INMUNIZACIONES:</div>
             </div>
             <div class="c xc y3a w1c h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_no_pats']->inmunizaciones}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_no_pats']->inmunizaciones)}}</div>
             </div>
             <div class="c xb y3a w9 h9">
                 <div class="t m0 x6 hc y1a ff3 fs6 fc0 sc0 ls0 ws0">HABITOS ALIMENTICIOS :</div>
@@ -535,7 +535,7 @@
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">TRANSFUSIONES:</div>
             </div>
             <div class="c xc y3b w1c h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_no_pats']->transfusiones}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_no_pats']->transfusiones)}}</div>
             </div>
             <div class="c xb y3b w9 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">HIGIENE:</div>
@@ -553,13 +553,13 @@
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">TATUAJES:</div>
             </div>
             <div class="c xc y3c w1c h2">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_no_pats']->tatuajes}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_no_pats']->tatuajes)}}</div>
             </div>
             <div class="c xb y3c w9 h2">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">PERFORACIONES:</div>
             </div>
             <div class="c x7 y3c wa h2">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_no_pats']->perforaciones}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_no_pats']->perforaciones)}}</div>
             </div>
             <div class="c x9 y3c w6 h2">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">OTROS:</div>
@@ -574,19 +574,19 @@
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">DIABETES:</div>
             </div>
             <div class="c xc y3e w6 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->diabetes}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->diabetes)}}</div>
             </div>
             <div class="c x4 y3e w11 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">HIPERTENSIÓN:</div>
             </div>
             <div class="c xb y3e w9 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->hipertension}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->hipertension)}}</div>
             </div>
             <div class="c x7 y3e w6 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">DISLIPIDEMIAS:</div>
             </div>
             <div class="c x8 y3e wa h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->dislipidemias}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->dislipidemias)}}</div>
             </div>
             <div class="c xa y3e w8 h9">
                 <div class="t m0 x36 h7 y3f ff1 fs2 fc0 sc0 ls0 ws0">ADICCIONES</div>
@@ -601,7 +601,7 @@
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">ALERGIAS:</div>
             </div>
             <div class="c xb y40 w9 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->alergias}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->alergias)}}</div>
             </div>
             <div class="c x7 y40 w6 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">CIRUGÍAS:</div>
@@ -609,20 +609,20 @@
             <div class="c x8 y40 wa h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->cirugias}}</div>
             </div>
-            <div class="c xa y40 we h9">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TABACO:</div>
+            <div class="c xa y40 wa h9">
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">TABACO: {{$d['hca_hcg_an_personales_pats']->tabaco}}</div>
             </div>
             <div class="c x1 y41 wb h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">NEFROPATÍAS:</div>
             </div>
             <div class="c xc y41 w6 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->nefropatias}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->nefropatias)}}</div>
             </div>
             <div class="c x4 y41 w11 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">CARDIOPATÍAS:</div>
             </div>
             <div class="c xb y41 w9 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->cardiopatias}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->cardiopatias)}}</div>
             </div>
             <div class="c x7 y41 w6 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">NEUMOPATÍAS:</div>
@@ -630,20 +630,20 @@
             <div class="c x8 y41 wa h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->neumopatias}}</div>
             </div>
-            <div class="c xa y41 we h9">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">ALCOHOL:</div>
+            <div class="c xa y41 wa h9">
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">ALCOHOL: {{ifValue($d['hca_hcg_an_personales_pats']->tabaco)}}</div>
             </div>
             <div class="c x1 y42 wb h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">PSIQUIÁTRICOS:</div>
             </div>
             <div class="c xc y42 w6 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->psiquiatricos}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->psiquiatricos)}}</div>
             </div>
             <div class="c x4 y42 w11 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">CONVULSIONES:</div>
             </div>
             <div class="c xb y42 w9 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->convulsiones}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{ifValue($d['hca_hcg_an_personales_pats']->convulsiones)}}</div>
             </div>
             <div class="c x7 y42 w6 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">ONCOLÓGICOS:</div>
@@ -651,8 +651,8 @@
             <div class="c x8 y42 wa h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_personales_pats']->oncologicos}}</div>
             </div>
-            <div class="c xa y42 we h9">
-                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">DROGAS: </div>
+            <div class="c xa y42 wa h9">
+                <div class="t m0 x6 hb y10 ff3 fs5 fc0 sc0 ls0 ws0">DROGAS: {{ifValue($d['hca_hcg_an_personales_pats']->drogas)}}</div>
             </div>
             <div class="c x1 y43 w14 h2">
                 <div class="t m0 x36 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">ENFERMEDADES INFECTO-CONTAGIOSAS:</div>
@@ -679,13 +679,13 @@
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">RITMO:</div>
             </div>
             <div class="c xb y45 w9 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_gineco_obstetricos']->ritmo}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_gineco_obstetricos']->ritmo == 1 ? 'Regular' : 'Irregular'}}</div>
             </div>
             <div class="c x7 y45 w6 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">I.V.S.A:</div>
             </div>
             <div class="c x8 y45 w7 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_gineco_obstetricos']->ivsa}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_gineco_obstetricos']->IVSA}}</div>
             </div>
             <div class="c x9 y45 w6 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">MENOPAUSIA:</div>
@@ -697,19 +697,19 @@
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">FUM:</div>
             </div>
             <div class="c xc y46 w6 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_gineco_obstetricos']->fum}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{showDate($d['hca_hcg_an_gineco_obstetricos']->FUM)}}</div>
             </div>
             <div class="c x4 y46 w11 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">FUP.:</div>
             </div>
             <div class="c xb y46 w9 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_gineco_obstetricos']->fup}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{showDate($d['hca_hcg_an_gineco_obstetricos']->fup)}}</div>
             </div>
             <div class="c x7 y46 w6 h9">
                 <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">FUA.:</div>
             </div>
             <div class="c x8 y46 w7 h9">
-                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{$d['hca_hcg_an_gineco_obstetricos']->fua}}</div>
+                <div class="t m0 x6 hb y17 ff3 fs5 fc0 sc0 ls0 ws0">{{showDate($d['hca_hcg_an_gineco_obstetricos']->fua)}}</div>
             </div>
             <div class="c x9 y46 w6 h9">
                 <div class="t m0 x6 h11 y47 ff3 fs8 fc0 sc0 ls0 ws0">HIJOS(AS) VIVOS(AS):</div>
@@ -775,7 +775,9 @@
                 <div class="t m0 x6 h8 ya ff1 fs3 fc0 sc0 ls0 ws0">V. PADECIMIENTO ACTUAL</div>
             </div>
             <div class="c x1 y4d w2 h12">
-                <div class="t m0 x6 h7 y4e ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_motivo_padecimientos']->padecimiento_actual}}</div>
+                <div class="t m0 x6 h7 y4e ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_motivo_padecimientos']->padecimiento_actual}}
+                    </div>
                 <div class="t m0 x6 h7 y4f ff3 fs2 fc0 sc0 ls0 ws0"> </div>
             </div>
             <div class="c x1 y50 w1d h2">
@@ -932,91 +934,113 @@
                 <div class="t m0 x13 hb y5c ff1 fs5 fc0 sc0 ls0 ws0">CABEZA</div>
             </div>
             <div class="c xc y5b w1f h14">
-                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->cabeza}}</div>
+                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->cabeza}}
+                </div>
             </div>
             <div class="c x1 y5e wb h14">
                 <div class="t m0 x13 hb y5f ff1 fs5 fc0 sc0 ls0 ws0">CUELLO</div>
             </div>
             <div class="c xc y5e w1f h14">
-                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->cuello}}</div>
+                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->cuello}}
+                </div>
             </div>
             <div class="c x1 y60 wb h14">
                 <div class="t m0 x12 hb y5f ff1 fs5 fc0 sc0 ls0 ws0">TÓRAX</div>
             </div>
             <div class="c xc y60 w1f h14">
-                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->torax}}</div>
+                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->torax}}
+                </div>
             </div>
             <div class="c x1 y61 wb h14">
                 <div class="t m0 x39 hb y5f ff1 fs5 fc0 sc0 ls0 ws0">ABDOMEN</div>
             </div>
             <div class="c xc y61 w1f h14">
-                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->abdomen}}</div>
+                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->abdomen}}
+                </div>
             </div>
             <div class="c x1 y62 wb h14">
                 <div class="t m0 xf hb y5f ff1 fs5 fc0 sc0 ls0 ws0">EXTREMIDADES </div>
             </div>
             <div class="c xc y62 w1f h14">
-                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->extremidades}}</div>
+                <div class="t m0 x6 h7 y5d ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->extremidades}}
+                </div>
             </div>
             <div class="c x1 y63 wb h9">
                 <div class="t m0 x13 hb y64 ff1 fs5 fc0 sc0 ls0 ws0">GENITAL</div>
             </div>
             <div class="c xc y63 w1f h9">
-                <div class="t m0 x6 h7 y65 ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->genital}}</div>
+                <div class="t m0 x6 h7 y65 ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->genital}}
+                </div>
             </div>
             <div class="c x1 y66 wb h9">
                 <div class="t m0 x34 hb y10 ff1 fs5 fc0 sc0 ls0 ws0">NEUROLÓGICO</div>
             </div>
             <div class="c xc y66 w1f h9">
-                <div class="t m0 x6 h7 y65 ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->neurologico}}</div>
+                <div class="t m0 x6 h7 y65 ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->neurologico}}
+                </div>
             </div>
             <div class="c x1 y67 wb h9">
                 <div class="t m0 x36 hb y10 ff1 fs5 fc0 sc0 ls0 ws0">PIEL</div>
             </div>
             <div class="c xc y67 w1f h9">
-                <div class="t m0 x6 h7 y65 ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->piel}}</div>
+                <div class="t m0 x6 h7 y65 ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->piel}}
+                </div>
             </div>
             <div class="c x1 y68 wb h2">
                 <div class="t m0 x12 hb y15 ff1 fs5 fc0 sc0 ls0 ws0">OTROS</div>
             </div>
             <div class="c xc y68 w1f h2">
-                <div class="t m0 x6 h7 y69 ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_habitus_exteriors']->otros}}</div>
+                <div class="t m0 x6 h7 y69 ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_habitus_exteriors']->otros}}
+                </div>
             </div>
             <div class="c x1 y6a w2 h2">
                 <div class="t m0 x6 h8 ya ff1 fs3 fc0 sc0 ls0 ws0">VIII. ESTUDIOS AUXILIARES DE DIAGNÓSTICO </div>
             </div>
             <div class="c x1 y6b w2 h15">
-                <div class="t m0 x6 h7 y6c ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_exploraciones_fisicas']->cabeza}}</div>
+                <div class="t m0 x6 h7 y6c ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_exploraciones_fisicas']->cabeza}}
+                </div>
             </div>
             <div class="c x1 y6d w4 h2">
                 <div class="t m0 x6 h16 y6e ff1 fs9 fc0 sc0 ls0 ws0">IX. ESTADO NUTRICIONAL</div>
             </div>
             <div class="c x4 y6d w11 h2">
-                <div class="t m0 x39 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">NORMAL</div>
+                <div class="t m0 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">NORMAL {{check($d['hcp_hca_estado_nutricionals']->tipo, 'normal',0)}}</div>
             </div>
             <div class="c xb y6d w9 h2">
-                <div class="t m0 xf hb y15 ff3 fs5 fc0 sc0 ls0 ws0">SOBREPESO</div>
+                <div class="t m0 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">SOBREPESO {{check($d['hcp_hca_estado_nutricionals']->tipo, 'sobrepeso',0)}}</div>
             </div>
             <div class="c x7 y6d w6 h2">
-                <div class="t m0 x3a hb y15 ff3 fs5 fc0 sc0 ls0 ws0">OBESIDAD</div>
+                <div class="t m0 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">OBESIDAD {{check($d['hcp_hca_estado_nutricionals']->tipo, 'obesidad',0)}}</div>
             </div>
             <div class="c x8 y6d w7 h2">
-                <div class="t m0 x14 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">DES. LEVE</div>
+                <div class="t m0 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">DES. LEVE {{check($d['hcp_hca_estado_nutricionals']->tipo, 'desnutricion leve',0)}}</div>
             </div>
             <div class="c x9 y6d w6 h2">
-                <div class="t m0 xf hb y15 ff3 fs5 fc0 sc0 ls0 ws0">DES. MODERADA</div>
+                <div class="t m0 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">DES. MODERADA {{check($d['hcp_hca_estado_nutricionals']->tipo, 'desnutricion moderada',0)}}</div>
             </div>
             <div class="c xa y6d we h2">
-                <div class="t m0 xf hb y15 ff3 fs5 fc0 sc0 ls0 ws0">DES. GRAVE</div>
+                <div class="t m0 hb y15 ff3 fs5 fc0 sc0 ls0 ws0">DES. GRAVE {{check($d['hcp_hca_estado_nutricionals']->tipo, 'desnutricion grave',0)}}</div>
             </div>
             <div class="c xe y6d w9 h2">
-                <div class="t m0 xf hf y6f ff3 fs7 fc0 sc0 ls0 ws0">RECUPERADO</div>
+                <div class="t m0 hf y6f ff3 fs7 fc0 sc0 ls0 ws0">RECUPERADO {{check($d['hcp_hca_estado_nutricionals']->tipo, 'recuperado',0)}}</div>
             </div>
             <div class="c x1 y70 w2 h2">
                 <div class="t m0 x6 h8 y71 ff1 fs3 fc0 sc0 ls0 ws0">X. IMPRESIÓN DIAGNÓSTICA </div>
             </div>
             <div class="c x1 y72 w2 h13">
-                <div class="t m0 x6 h7 y73 ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_pronosticos']->impresión_diagnostica}}</div>
+                <div class="t m0 x6 h7 y73 ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_pronosticos']->impresión_diagnostica}}
+                </div>
             </div>
             <div class="c x1 y74 w2 h2">
                 <div class="t m0 x6 h8 y71 ff1 fs3 fc0 sc0 ls0 ws0">XI. TERAPÉUTICA (CUADRO BÁSICO)</div>
@@ -1037,7 +1061,9 @@
                 <div class="t m0 x6 h8 y71 ff1 fs3 fc0 sc0 ls0 ws0">XII. CUIDADOS GENERALES</div>
             </div>
             <div class="c x1 y78 w2 h15">
-                <div class="t m0 x6 h7 y6c ff3 fs2 fc0 sc0 ls0 ws0">{{$d['hc_pronosticos']->cuidados_generales}}</div>
+                <div class="t m0 x6 h7 y6c ff3 fs2 fc0 sc0 ls0 ws0 fitty">
+                    {{$d['hc_pronosticos']->cuidados_generales}}
+                </div>
             </div>
             <div class="c x1 y79 w4 h2">
                 <div class="t m0 x6 h8 y7a ff1 fs3 fc0 sc0 ls0 ws0">XII. PRONÓSTICO</div>
