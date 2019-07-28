@@ -2,7 +2,6 @@
 
 return [
     'loggingin'    => 'Iniciando sesión',
-    'signin_below' => 'Iniciar sesión',
-    'remember_me' => 'Recordarme',
+    'signin_below' => 'Ingresar abajo:',
     'welcome'      => 'Bienvenido a Voyager. El administrador desaparecido de Laravel ',
 ];

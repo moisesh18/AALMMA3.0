@@ -7,6 +7,7 @@
         @if($options->type == 'belongsTo')
 
             @if(isset($view) && ($view == 'browse' || $view == 'read'))
+
                 @php
                     $relationshipData = (isset($data)) ? $data : $dataTypeContent;
                     $model = app($options->model);
@@ -20,10 +21,12 @@
                 @endif
 
             @else
+
                 <select
                     class="form-control select2-ajax" name="{{ $options->column }}"
                     data-get-items-route="{{route('voyager.' . $dataType->slug.'.relation')}}"
                     data-get-items-field="{{$row->field}}"
+                    data-method="{{ isset($dataTypeContent) ? 'edit' : 'add' }}"
                 >
                     @php
                         $model = app($options->model);

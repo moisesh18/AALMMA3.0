@@ -314,6 +314,7 @@ class VoyagerBaseController extends Controller
         $slug = $this->getSlug($request);
 
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
+
         // Check permission
         $this->authorize('add', app($dataType->model_name));
 
@@ -642,7 +643,8 @@ class VoyagerBaseController extends Controller
         $search = $request->input('search', false);
         $dataType = Voyager::model('DataType')->where('slug', '=', $slug)->first();
 
-        foreach ($dataType->editRows as $key => $row) {
+        $rows = $request->input('method', 'add') == 'add' ? $dataType->addRows : $dataType->editRows;
+        foreach ($rows as $key => $row) {
             if ($row->field === $request->input('type')) {
                 $options = $row->details;
                 $skip = $on_page * ($page - 1);

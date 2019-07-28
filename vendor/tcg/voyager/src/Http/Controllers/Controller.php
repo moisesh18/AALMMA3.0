@@ -96,6 +96,9 @@ abstract class Controller extends BaseController
                 // If the file upload is null and it has a current file keep the current file
                 if ($row->type == 'file') {
                     $content = $data->{$row->field};
+                    if (!$content) {
+                        $content = json_encode([]);
+                    }
                 }
 
                 if ($row->type == 'password') {
@@ -118,6 +121,7 @@ abstract class Controller extends BaseController
                 }
             }
         }
+
         $data->save();
 
         // Save translations

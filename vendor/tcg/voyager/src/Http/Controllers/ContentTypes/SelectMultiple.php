@@ -33,6 +33,7 @@ class SelectMultiple extends BaseType
             }
             $content = $newContent;
         }
+
         return json_encode($content);
     }
 }
